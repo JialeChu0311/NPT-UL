@@ -7,11 +7,6 @@ import util.util as util
 
 
 class CWRModel(BaseModel):
-    """ This class implements CWR model, described in the paper
-    Single Underwater Image Restoration by contrastive learning
-    Junlin Han, Mehrdad Shoeiby, Tim Malthus, Elizabeth Botha, Janet Anstee, Saeed Anwar, Ran Wei, Lars Petersson, Mohammad Ali Armin
-    International Geoscience and Remote Sensing Symposium (IGARSS), 2021
-
 
     The code borrows heavily from the PyTorch implementation of CycleGAN and CUT
     https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix
@@ -35,7 +30,7 @@ class CWRModel(BaseModel):
         parser.add_argument('--num_patches', type=int, default=256, help='number of patches per layer')
         parser.add_argument('--flip_equivariance',
                             type=util.str2bool, nargs='?', const=True, default=False,
-                            help="Enforce flip-equivariance as additional regularization. It's used by FastCUT, but not CWR")
+                            help="Enforce flip-equivariance as additional regularization. It's used by FastCUT, but not NPT-UL")
 
         parser.set_defaults(pool_size=0)  # no image pooling
 
